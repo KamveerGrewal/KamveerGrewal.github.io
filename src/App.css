@@ -1,0 +1,233 @@
+/* =========================
+   GLOBAL RESET
+   ========================= */
+   /* =========================
+   MOBILE RESPONSIVENESS
+   ========================= */
+
+/* Only applies to screens smaller than 768px (Tablets & Phones) */
+@media (max-width: 768px) {
+  
+  /* 1. Squeeze the Navbar spacing */
+  .menu li {
+    margin: 0 10px; /* Reduces gap from 40px to 10px */
+  }
+  
+  .menu a {
+    font-size: 0.8rem; /* Make text slightly smaller */
+  }
+
+  /* 2. Adjust content width so it doesn't hit the edges */
+  .hero-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  /* 3. Stack the project grid into a single column */
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 column only */
+  }
+}
+html {
+  scroll-behavior: smooth; /* Makes clicking links scroll smoothly */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ADD8E6; /* Your Light Blue Base */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* =========================
+   NAVBAR (Re-using your preferences)
+   ========================= */
+.navcontainer {
+  position: fixed; /* Fixed stays at top even when scrolling */
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: rgba(173, 216, 230, 0.9); /* Semi-transparent blue */
+  backdrop-filter: blur(5px); /* Cool blur effect behind navbar */
+  z-index: 1000;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+.hero-section {
+  min-height: 100dvh; /* Changing height to min-height prevents cutting off content on small phones */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box; /* Ensures padding doesn't stretch the screen width */
+}
+
+/* In App.css */
+
+.quote {
+  /* clamp(minimum size,  preferred size based on screen width,  maximum size) */
+  font-size: clamp(2.5rem, 6vw, 5rem); 
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: clamp(1.1rem, 2.5vw, 2rem); /* Scales smoothly */
+  color: #555;
+  margin-bottom: 40px;
+}
+.cta-button {
+  
+  color: #2c3e50;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #2c3e50; 
+  color: white;              
+  transform: scale(1.05);  
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+}
+
+/* =========================
+   GENERAL CONTENT SECTIONS
+   ========================= */
+.content-section {
+  padding: 80px 20px; /* Top/Bottom padding */
+  max-width: 1000px;
+  margin: 0 auto; /* Centers the section */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+/* Card Style (The White Boxes) */
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Soft shadow */
+}
+
+/* =========================
+   ABOUT & SKILLS
+   ========================= */
+.skills-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.skill-tag {
+  background-color: #E6F2FF; /* Very faint blue */
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #0066cc;
+  font-weight: 600;
+}
+
+/* =========================
+   PROJECTS GRID
+   ========================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto layouts grid */
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Moves up slightly on hover */
+}
+
+.project-desc {
+  color: #666;
+  line-height: 1.6;
+}
+
+.project-links a {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+  margin-right: 15px;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   CONTACT / FOOTER
+   ========================= */
+.footer-section {
+  padding-bottom: 100px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.email-link {
+  font-size: 1.2rem; /* Reduced from 1.5rem or larger */
+  color: #2c3e50;
+  text-decoration: underline;
+  text-decoration-color: transparent; /* Hides underline until hover */
+  transition: text-decoration-color 0.3s;
+}
+
+.email-link:hover {
+  text-decoration-color: #2c3e50; /* Underline appears on hover */
+}
+.social-links a {
+  margin: 0 15px;
+  color: #555;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.social-links a:hover {
+  color: #000;
+}
