@@ -91,13 +91,13 @@ function App() {
       {/* --- CONTACT SECTION --- */}
       <section id="contact" className="content-section footer-section">
         <div className="card text-center">
-          <h2>Let's Connect</h2>
+          <h2><a href = "https://www.linkedin.com/in/kamveer-grewal/" className="cta-button">Let's Connect!</a></h2>
           <p>I'm currently looking for internship opportunities.</p>
-          <a href="mailto:your.email@mail.utoronto.ca" className="email-link">your.email@mail.utoronto.ca</a>
+          <a href="mailto:kamveerg@gmail.com" className="email-link">kamveerg@gmail.com</a>
           
           <div className="social-links">
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
+            <a href="https://www.linkedin.com/in/kamveer-grewal/">LinkedIn</a>
+            <a href="https://github.com/KamveerGrewal?tab=repositories">GitHub</a>
             <a href="#">Resume</a>
           </div>
         </div>
