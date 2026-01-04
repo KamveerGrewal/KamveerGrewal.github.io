@@ -1,55 +1,41 @@
-/* =========================
-   GLOBAL RESET
-   ========================= */
-   /* =========================
-   MOBILE RESPONSIVENESS
-   ========================= */
-
-/* Only applies to screens smaller than 768px (Tablets & Phones) */
 @media (max-width: 768px) {
   
-  /* 1. Squeeze the Navbar spacing */
   .menu li {
-    margin: 0 10px; /* Reduces gap from 40px to 10px */
+    margin: 0 10px;
   }
   
   .menu a {
-    font-size: 0.8rem; /* Make text slightly smaller */
+    font-size: 0.8rem;
   }
 
-  /* 2. Adjust content width so it doesn't hit the edges */
   .hero-content {
     width: 90%;
     margin: 0 auto;
   }
   
-  /* 3. Stack the project grid into a single column */
   .projects-grid {
-    grid-template-columns: 1fr; /* 1 column only */
+    grid-template-columns: 1fr;
   }
 }
 html {
-  scroll-behavior: smooth; /* Makes clicking links scroll smoothly */
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #ADD8E6; /* Your Light Blue Base */
+  background-color: #ADD8E6;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
 }
 
-/* =========================
-   NAVBAR (Re-using your preferences)
-   ========================= */
 .navcontainer {
-  position: fixed; /* Fixed stays at top even when scrolling */
+  position: fixed; 
   top: 0;
   width: 100%;
   padding: 20px 0;
-  background-color: rgba(173, 216, 230, 0.9); /* Semi-transparent blue */
-  backdrop-filter: blur(5px); /* Cool blur effect behind navbar */
+  background-color: rgba(173, 216, 230, 0.9);
+  backdrop-filter: blur(5px);
   z-index: 1000;
 }
 
@@ -79,24 +65,18 @@ body {
   color: #fff;
 }
 
-/* =========================
-   HERO SECTION
-   ========================= */
 .hero-section {
-  min-height: 100dvh; /* Changing height to min-height prevents cutting off content on small phones */
+  min-height: 100dvh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0 20px;
-  box-sizing: border-box; /* Ensures padding doesn't stretch the screen width */
+  box-sizing: border-box;
 }
 
-/* In App.css */
-
 .quote {
-  /* clamp(minimum size,  preferred size based on screen width,  maximum size) */
   font-size: clamp(2.5rem, 6vw, 5rem); 
   margin-bottom: 15px;
   color: #2c3e50;
@@ -104,7 +84,7 @@ body {
 }
 
 .hero-content p {
-  font-size: clamp(1.1rem, 2.5vw, 2rem); /* Scales smoothly */
+  font-size: clamp(1.1rem, 2.5vw, 2rem);
   color: #555;
   margin-bottom: 40px;
 }
@@ -122,13 +102,10 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
 }
 
-/* =========================
-   GENERAL CONTENT SECTIONS
-   ========================= */
 .content-section {
-  padding: 80px 20px; /* Top/Bottom padding */
+  padding: 80px 20px; 
   max-width: 1000px;
-  margin: 0 auto; /* Centers the section */
+  margin: 0 auto;
 }
 
 .section-title {
@@ -138,17 +115,13 @@ body {
   color: #2c3e50;
 }
 
-/* Card Style (The White Boxes) */
 .card {
   background: white;
   padding: 40px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Soft shadow */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* =========================
-   ABOUT & SKILLS
-   ========================= */
 .skills-grid {
   display: flex;
   gap: 10px;
@@ -157,7 +130,7 @@ body {
 }
 
 .skill-tag {
-  background-color: #E6F2FF; /* Very faint blue */
+  background-color: #E6F2FF;
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -165,12 +138,9 @@ body {
   font-weight: 600;
 }
 
-/* =========================
-   PROJECTS GRID
-   ========================= */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto layouts grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 20px;
 }
 
@@ -183,7 +153,7 @@ body {
 }
 
 .project-card:hover {
-  transform: translateY(-5px); /* Moves up slightly on hover */
+  transform: translateY(-5px);
 }
 
 .project-desc {
@@ -199,9 +169,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* =========================
-   CONTACT / FOOTER
-   ========================= */
 .footer-section {
   padding-bottom: 100px;
 }
@@ -211,23 +178,31 @@ body {
 }
 
 .email-link {
-  font-size: 1.2rem; /* Reduced from 1.5rem or larger */
+  font-size: 1.2rem;
   color: #2c3e50;
   text-decoration: underline;
-  text-decoration-color: transparent; /* Hides underline until hover */
+  text-decoration-color: transparent;
   transition: text-decoration-color 0.3s;
 }
 
 .email-link:hover {
-  text-decoration-color: #2c3e50; /* Underline appears on hover */
+  text-decoration-color: #2c3e50;
 }
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
 .social-links a {
-  margin: 0 15px;
-  color: #555;
-  text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 2.5rem;
+  color: #555;    
+  transition: all 0.3s ease;
+  display: flex;     
 }
 
 .social-links a:hover {
-  color: #000;
+  transform: translateY(-5px); 
+  color: #2c3e50; 
 }
